@@ -4,6 +4,9 @@ import bg from './img/bg.png';
 import Orb from "./Components/Orb/Orb";
 import Navigation from "./Components/Navigation/Navigation";
 import { useMemo, useState } from "react";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Incomes from "./Components/Incomes/Incomes";
+import Expenses from "./Components/Expenses/Expenses";
 
 function App() {
   const [active, setActive] = useState(1);
@@ -11,6 +14,14 @@ function App() {
   const displayData = () =>{
     switch (active){
       case 1:
+        return <Dashboard/>
+      case 2: 
+        return <Dashboard/>
+      case 3: 
+        return <Incomes/>
+      case 4: 
+        return <Expenses/>
+      default: 
         return <Dashboard/>
     }
   }
