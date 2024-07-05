@@ -7,12 +7,20 @@ exports.addExpense = async (req, res) =>{
         title,
         amount,
         category,
+<<<<<<< HEAD
         description: description || '',
+=======
+        description,
+>>>>>>> 6e810b16c833142499fec490c3e2412e0cbe29b5
         date
     })
 
     try {
+<<<<<<< HEAD
         if (!title || !category || !date) {
+=======
+        if (!title || !category || !description || !date) {
+>>>>>>> 6e810b16c833142499fec490c3e2412e0cbe29b5
             return res.status(400).json({message: "Todos los campos son obligatorios"})
         }
         if (amount <= 0 || !amount === 'number') {
