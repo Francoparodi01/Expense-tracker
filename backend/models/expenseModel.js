@@ -29,11 +29,7 @@ const ExpenseSchema = new mongoose.Schema({
     },
     description:{
         type: String,
-<<<<<<< HEAD
         required: false,
-=======
-        required: true,
->>>>>>> 6e810b16c833142499fec490c3e2412e0cbe29b5
         maxLength: 20,
         trim: true
     }

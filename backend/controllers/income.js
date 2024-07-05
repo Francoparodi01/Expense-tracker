@@ -7,30 +7,17 @@ exports.addIncome = async (req, res) =>{
         title,
         amount,
         category,
-<<<<<<< HEAD
         description: description || '',
-=======
-        description,
->>>>>>> 6e810b16c833142499fec490c3e2412e0cbe29b5
         date
     })
 
     try {
-<<<<<<< HEAD
         if (!title || !category || !date) {
             return res.status(400).json({ message: "Todos los campos son obligatorios" });
         }
         if (amount <= 0 || !amount === 'number') {
             return res.status(400).json({ message: "El monto debe ser un número positivo" });
         }        
-=======
-        if (!title || !category || !description || !date) {
-            return res.status(400).json({message: "Todos los campos son obligatorios"})
-        }
-        if (amount <= 0 || !amount === 'number') {
-            return res.status(400).json({message: "El monto debe ser un número positivo"})
-        }
->>>>>>> 6e810b16c833142499fec490c3e2412e0cbe29b5
         await income.save()
         res.status(200).json({message: "Ingreso añadido"})
     } catch (error) {
