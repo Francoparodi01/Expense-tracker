@@ -35,22 +35,22 @@ function Chart() {
         labels: incomes.map((inc) => dateFormat(inc.date)),
         datasets: [
             {
-                label: 'Income',
+                label: 'Ingresos',
                 data: incomes.map((income) => income.amount),
-                backgroundColor: 'rgba(0, 128, 0, 0.2)', // Color verde con transparencia
-                borderColor: 'rgba(0, 128, 0, 1)', // Color verde para la línea
+                backgroundColor: 'rgba(0, 128, 0, 0.2)',
+                borderColor: 'rgba(0, 128, 0, 1)', 
                 borderWidth: 2,
-                pointBackgroundColor: 'rgba(0, 128, 0, 1)', // Color verde para los puntos
+                pointBackgroundColor: 'rgba(0, 128, 0, 1)', 
                 pointBorderColor: 'rgba(0, 128, 0, 1)',
                 tension: 0.3
             },
             {
-                label: 'Expenses',
+                label: 'Gastos',
                 data: expenses.map((expense) => expense.amount),
-                backgroundColor: 'rgba(255, 0, 0, 0.2)', // Color rojo con transparencia
-                borderColor: 'rgba(255, 0, 0, 1)', // Color rojo para la línea
+                backgroundColor: 'rgba(255, 0, 0, 0.2)', 
+                borderColor: 'rgba(255, 0, 0, 1)', 
                 borderWidth: 2,
-                pointBackgroundColor: 'rgba(255, 0, 0, 1)', // Color rojo para los puntos
+                pointBackgroundColor: 'rgba(255, 0, 0, 1)', 
                 pointBorderColor: 'rgba(255, 0, 0, 1)',
                 tension: 0.3
             },
@@ -66,7 +66,7 @@ function Chart() {
             },
             title: {
                 display: true,
-                text: 'Income and Expenses Over Time',
+                text: 'Ingresos y Gastos en tiempo determinado',
             },
         },
         scales: {
